@@ -6,8 +6,9 @@ import java.util.HashMap;
 public class TwoSum {
 
     /**
-     * Use a hashmao to reduce the search time complexity .
+     * Hash map solution: using a hashmao to reduce the search time complexity .
      * The map's key is the number, and the value is the position which we need return.
+     * O(n) runtime, O(n) space.
      */
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];

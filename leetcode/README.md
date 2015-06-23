@@ -4,7 +4,7 @@ LeetCode Solutions
 ## Problems
 |No.|Title|Data Structures & Algorithms|Difficulty |Solution|
 |---|-----|----------------------------|-----------|--------|
-|1|[Two Sum](two-sum)|Array, Hash, Sort|Medium|[Java](two-sum/TwoSum.java) [C++](two-sum/TwoSum.cpp) [Python](two-sum/TwoSum.py) | [Ruby](two-sum/TwoSum.rb)|
+|1|[Two Sum](two-sum)|Array, Hash, Sort|Medium|[Java](two-sum/TwoSum.java) [C++](two-sum/TwoSum.cpp) [Python](two-sum/TwoSum.py) [Ruby](two-sum/TwoSum.rb)|
 |2|[Add Two Numbers](add-two-numbers)|LiskedList, Math|Medium|[Java](add-two-numbers/AddTwoNumbers.java) [C++](add-two-numbers/AddTwoNumbers.cpp)|
 
 

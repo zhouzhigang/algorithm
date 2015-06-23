@@ -1,5 +1,6 @@
 # [Two Sum](https://leetcode.com/problems/two-sum/)
-Tag: Array
+
+Tag: `Array`, `Hash`, `Sort`
 
 ## Description
 Give an array of integers, find two numbers such that they add up to a specific target number.
@@ -11,7 +12,13 @@ You may assume that each input would have exactly one solution.
 **Input**: numbers = {2, 7, 11, 15}, target = 9
 **Output**: index1 = 1, index2 = 2
 
+## Test Cases
+
+
 ## Solution
+
+[Java](TwoSum.java)  [C++](TwoSum.cpp) [Python](TwoSum.py) [Ruby](TwoSum.rb)
+
 ### Brute fore - O(n^2) runtime, O(1) space
 
 The brute force approach is simple.
@@ -34,26 +41,25 @@ Reduce the runtime complexity of looking up a value to O(1) using a hash map tha
             return [i+1, j+1]
         map.put(nums[i])
 
-* Java: `Map<K, V>`, `HashMap<K, V>`
+#### Hash/Map/Set/Dict in different languages
 
-    map.get(key)`;
-    map.put(key) = val;
+* Java: `Map<K, V>`, `HashMap<K, V>`
+    - `map.containsKey`
+    - `map.get(key)`
+    - `map.put(key) = val`
 
 * C++: `map<K, V>`, `map<K, V>::iterator`
-
-    map.find(key);
-    map[key] = val;
+    - `map.find(key)`
+    - `map[key] = val`
 
 * Python: dictionary `{}`
-
-    dict.get(key)
-    dict[key] = val
+    - `dict.get(key)`
+    - `dict[key] = val`
 
 * Ruby: hash `{}`
-
-    hash.iscontains?(key)
-    hash.get()
-    hash[key] = value
+    - `hash.iscontains?(key)`
+    - `hash.get()`
+    - `hash[key] = value`
 
 ### Sort the array - O(nlgn) runtime, O(n) space
 
@@ -62,5 +68,19 @@ Use an extra array to save the sorted index
     idxs = 0..length-1
     sort idxs according the value in nums
 
+#### Array in different languages
+* Java: 
+    - declaration: `int[] arr`(more clear), `int arr[]`(c style)
+    - defination: 
+    - length: `a.length`(attribute, not a method)
+    - loops: `for`
 
+* C++:
+
+* Python:
+
+* Ruby:
+
+## Further More
+* What if the array aleady sorted?
 

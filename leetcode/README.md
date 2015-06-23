@@ -2,16 +2,16 @@
 LeetCode Solutions
 
 ## Problems
-|No.    |Title              |Data Structures & Algorithms   |Difficulty |
-|-------|-------------------|-------------------------------|-----------|
-|1      |[Two Sum](two-sum) |Array, Hash, Sort              |Medium     |
+|No.|Title|Data Structures & Algorithms|Difficulty |Solution|
+|---|-----|----------------------------|-----------|--------|
+|1|[Two Sum](two-sum)|Array, Hash, Sort|Medium|[Java](two-sum/TwoSum.java) [C++](two-sum/TwoSum.cpp) [Python](two-sum/TwoSum.py) | [Ruby](two-sum/TwoSum.rb)|
+|2|[Add Two Numbers](add-two-numbers)|LiskedList, Math|Medium|[Java](add-two-numbers/AddTwoNumbers.java) [C++](add-two-numbers/AddTwoNumbers.cpp)|
 
 
 ## Reference
 * [LeetCode Online Judge Problems](https://leetcode.com/problemset/algorithms)
 * [LeetCode Problems' cpp Solution by haoel](https://github.com/haoel/leetcode)
 * [LintCode cpp solution by soulmachine](https://github.com/soulmachine/lintcode)
-* [LeetCode solutions written in Java by yuzhangcmu](https://github.com/yuzhangcmu/LeetCode)
 * [LeetCode cpp solution by iphkwan](https://github.com/iphkwan/leetcode)
 * [LeetCode cpp solutions by maskray](http://maskray.me/blog/2014-06-29-leetcode-solutions)
 * [Pure C solution for LeetCode by lennylxx](https://github.com/lennylxx/leetcode)

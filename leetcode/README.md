@@ -4,8 +4,9 @@ LeetCode Solutions
 ## Problems
 |No.|Title|Data Structures & Algorithms|Difficulty |Solution|
 |---|-----|----------------------------|-----------|--------|
-|1|[Two Sum](two-sum)|Array, Hash, Sort|Medium|[Java](two-sum/TwoSum.java) [C++](two-sum/TwoSum.cpp) [Python](two-sum/TwoSum.py) [Ruby](two-sum/TwoSum.rb)|
-|2|[Add Two Numbers](add-two-numbers)|LiskedList, Math|Medium|[Java](add-two-numbers/AddTwoNumbers.java) [C++](add-two-numbers/AddTwoNumbers.cpp)|
+|3|[Longest Substring Without Repeating Characters](longest-substring-without-repeating-characters)|`Hash Table`, `Two Pointers`, `String`|Medium|[Java](longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharacters.java)|
+|2|[Add Two Numbers](add-two-numbers)|`LiskedList`, `Math`|Medium|[Java](add-two-numbers/AddTwoNumbers.java) [C++](add-two-numbers/AddTwoNumbers.cpp)|
+|1|[Two Sum](two-sum)|`Array`, `Hash`, `Sort`|Medium|[Java](two-sum/TwoSum.java) [C++](two-sum/TwoSum.cpp) [Python](two-sum/TwoSum.py) [Ruby](two-sum/TwoSum.rb)|
 
 
 ## Reference

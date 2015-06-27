@@ -1,11 +1,9 @@
 # hash(map) solution.
 def two_sum(nums, target)
   hash = {}
-  i = 0
-  nums.each do |val|
-    i += 1
+  nums.each_with_index do |val, i|
     if hash.include?(val)
-      return [hash[val], i]
+      return [hash[val] + 1, i + 1]
     end
     hash[target - val] = i;
   end

@@ -12,12 +12,13 @@ You may assume that each input would have exactly one solution.
 **Input**: numbers = {2, 7, 11, 15}, target = 9
 **Output**: index1 = 1, index2 = 2
 
-## Test Cases
+## Analysis
+### Test Cases
 
 
 ## Solution
 
-[Java](TwoSum.java)  [C++](TwoSum.cpp) [Python](TwoSum.py) [Ruby](TwoSum.rb)
+[Java](TwoSum.java) [C++](TwoSum.cpp) [Python](TwoSum.py) [Ruby](TwoSum.rb)
 
 ### Brute fore - O(n^2) runtime, O(1) space
 
@@ -60,6 +61,7 @@ Reduce the runtime complexity of looking up a value to O(1) using a hash map tha
     - `hash.iscontains?(key)`
     - `hash.get()`
     - `hash[key] = value`
+    - `hash.each { |key, val| }`, `hash.each { |pair| }`, `hash.each_key { |key| }`, `hash.each_value { |val| }`
 
 ### Sort the array - O(nlgn) runtime, O(n) space
 
@@ -72,14 +74,29 @@ Use an extra array to save the sorted index
 * Java: 
     - declaration: `int[] arr`(more clear), `int arr[]`(c style)
     - defination: 
-    - length: `a.length`(attribute, not a method)
+    - length: `arr.length`(attribute, not a method)
     - loops: `for`
 
 * C++:
+    - declaration: `int arr[size]`, `vector<int> vec`(STL)
+    - length: `vec.size()`
+    - loops: `for`
+    - get: `arr[i]`, `vec[i]`
+    - set: `arr[i] = val`, `vec.push_back(val)`
 
 * Python:
+    - declaration: `{}`
+    - length: `len(arr)`
+    - loops before 2.3: `for i in range(len(foo))`
+    - loops after 2.3: `for i, val in enumerate(foo)`
 
 * Ruby:
+    - declartion: `{}`
+    - length: `arr.length`
+    - loops: `for`, `arr.each {|val| }`, `arr.each_with_index {|val, i| }` 
+
+#### Sort method in different languages
+
 
 ## Further More
 * What if the array aleady sorted?

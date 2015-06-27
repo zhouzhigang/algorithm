@@ -7,35 +7,29 @@ import java.util.HashMap;
 public class LongestSubstringWithoutRepeatingCharacters {
     /**
      * Hash map solution.
+     * Use a hash map to dectect the duplicated character and index.
      */
     public static int lengthOfLongestSubstring(String s) {
         int len = 0;
-        // int start = 0;
+        // use a map to store each char's index.
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         char c;
         Integer pos;
-        int lastPos = 0;
+        // last repeated position(start = lastPos + 1)
+        int lastPos = -1;
         for (int i = 0; i < s.length(); i++) {
             c = s.charAt(i);
             pos = map.get(c);
-            if (pos != null && pos >= lastPos) {
-                // update `len` when `pos > lastPos` and `i - pos > len`
-                if (i - pos > len) {
-                    // start = pos;
-                    len = i - pos;
-                }
+            if (pos != null && pos > lastPos) {
                 // update next possible start position
-                lastPos = pos + 1;
-            } else {
-                if (i - lastPos >= len) {
-                    // start = lastPos;
-                    len++;
-                }
+                lastPos = pos;
+            }
+            if (i - lastPos > len) {
+                len = i - lastPos;
             }
             // update the lastest position of c
             map.put(c, i);
         }
-        System.out.println("len: " + len);
         return len;
     }
 
@@ -55,17 +49,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
         for (int i = 0; i < s.length(); i++) {
             c = s.charAt(i);
             pos = map[c];
-            if (pos != -1 && pos >= lastPos) {
-                // update `len` when `pos > lastPos` and `i - pos > len`
-                if (i - pos > len) {
-                    len = i - pos;
-                }
+            if (pos != -1 && pos > lastPos) {
                 // update next possible start position
                 lastPos = pos + 1;
-            } else {
-                if (i - lastPos >= len) {
-                    len++;
-                }
+            }
+            if (i - lastPos > len) {
+                len = i - lastPos;
             }
             // update the lastest position of c
             map[c] = i;
@@ -74,16 +63,16 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return len;
     }
     public static void main(String[] args) {
-        lengthOfLongestSubstring("abcabcab"); // 3
-        lengthOfLongestSubstring("bbbbbbbb"); // 1
-        lengthOfLongestSubstring(""); // 0
-        lengthOfLongestSubstring("c"); // 1
-        lengthOfLongestSubstring("abcd"); // 4
-        lengthOfLongestSubstring("cdd"); // 2
-        lengthOfLongestSubstring("abba"); // 2
-        lengthOfLongestSubstring("pwwkew"); //3
-        lengthOfLongestSubstring("dvdf"); // 3
-        lengthOfLongestSubstring("tmmzuxt"); // 5
-        lengthOfLongestSubstring("uqinntq"); // 4
+        String[] testArray = {"abcabcab", "bbbbbbbb", "", "c", "abcd", "cdd", "abba", "pwwkew", "dvdf", "tmmzuxt", "uqinntq"};
+        int[] expectedResult = {3, 1, 0, 1, 4, 2, 2, 3, 3, 5, 4};
+        int len = 0;
+        for (int i = 0; i < testArray.length; i++) {
+            len = lengthOfLongestSubstring(testArray[i]);
+            if (len == expectedResult[i]) {
+                System.out.println("Success: " + len);
+            } else {
+                System.out.println("Failed: " + len + "; expected: " + expectedResult[i]);
+            }
+        }
     }
 }

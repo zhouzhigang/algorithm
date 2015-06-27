@@ -10,4 +10,7 @@ Tags:  `Hash Table`, `Two Pointers`, `String`
 
 ## Solution
 
+[Java](LongestSubstringWithoutRepeatingCharacters.java) [CPP](LongestSubstringWithoutRepeatingCharacters.cpp)
+
+Use a hash map or array to store each character index, and keep track on the last repeated character index.
 

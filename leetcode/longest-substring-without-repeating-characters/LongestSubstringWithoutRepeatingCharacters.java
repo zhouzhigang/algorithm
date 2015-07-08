@@ -51,7 +51,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
             pos = map[c];
             if (pos != -1 && pos > lastPos) {
                 // update next possible start position
-                lastPos = pos + 1;
+                lastPos = pos;
             }
             if (i - lastPos > len) {
                 len = i - lastPos;

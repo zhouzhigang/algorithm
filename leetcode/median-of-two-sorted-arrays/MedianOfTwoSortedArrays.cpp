@@ -25,7 +25,7 @@ public:
             }
         }
         // both are not empty
-        while (lm < hm && ln < hn) {
+        while (lm < hm || ln < hn) {
             if (nums1[mm] < nums2[mn]) {
                 lm = mm + 1;
                 hn = mn;
@@ -106,10 +106,8 @@ public:
      */
     void testMedian(vector<int>& nums1, vector<int>& nums2, double expected) {
         double median = findMedianSortedArrays(nums1, nums2);
-        if (median - expected >= 0.001) {
+        if (median - expected >= 0.001 || expected - median >= 0.001) {
             cout << "median: " << median << "; expected: " << expected << endl;
-        } else {
-            cout << "successful" << endl;
         }
     }
 };

@@ -22,7 +22,7 @@ public class MedianOfTwoSortedArrays {
             }
         }
         // both are not empty
-        while (lm < hm && ln < hn) {
+        while (lm < hm || ln < hn) {
             if (nums1[mm] < nums2[mn]) {
                 lm = mm + 1;
                 hn = mn;
@@ -102,7 +102,7 @@ public class MedianOfTwoSortedArrays {
      */
     public void testMedian(int[] nums1, int[] nums2, double expected) {
         double median = findMedianSortedArrays(nums1, nums2);
-        if (median - expected >= 0.001) {
+        if (median - expected >= 0.001 || median - expected >= 0.001) {
             System.out.print(Arrays.toString(nums1));
             System.out.println(Arrays.toString(nums2));
             System.out.println("median: " + median + "; expected: " + expected);

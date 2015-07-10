@@ -4,9 +4,9 @@ LeetCode Solutions
 ## Problems
 |No.|Title|Data Structures & Algorithms|Difficulty |Solution|
 |---|-----|----------------------------|-----------|--------|
-|4|[Median of Two Sorted Arrays](median-of-two-sorted-arrays)|`Devide and Conquer`, `Array`, `Binary Search`|Hard|[Java](median-of-two-sorted-arrays/MedianOfTwoSortedArrays.java) [C++](median-of-two-sorted-arrays/MedianOfTwoSortedArrays.cpp)|
+|4|[Median of Two Sorted Arrays](median-of-two-sorted-arrays)|`Devide and Conquer`, `Array`, `Binary Search`|Hard|[Java](median-of-two-sorted-arrays/MedianOfTwoSortedArrays.java) [C++](median-of-two-sorted-arrays/MedianOfTwoSortedArrays.cpp) [C](median-of-two-sorted-arrays/MedianOfTwoSortedArrays.c)|
 |3|[Longest Substring Without Repeating Characters](longest-substring-without-repeating-characters)|`Hash Table`, `Two Pointers`, `String`|Medium|[Java](longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharacters.java) [Python](longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharacters.py)|
-|2|[Add Two Numbers](add-two-numbers)|`LiskedList`, `Math`|Medium|[Java](add-two-numbers/AddTwoNumbers.java) [C++](add-two-numbers/AddTwoNumbers.cpp)|
+|2|[Add Two Numbers](add-two-numbers)|`LiskedList`, `Math`|Medium|[Java](add-two-numbers/AddTwoNumbers.java) [C++](add-two-numbers/AddTwoNumbers.cpp) [Python](add-two-numbers/AddTwoNumbers.py)|
 |1|[Two Sum](two-sum)|`Array`, `Hash`, `Sort`|Medium|[Java](two-sum/TwoSum.java) [C++](two-sum/TwoSum.cpp) [Python](two-sum/TwoSum.py) [Ruby](two-sum/TwoSum.rb)|
 
 

@@ -31,13 +31,19 @@ public class AddTwoNumbers {
             curr = curr.next;
         }
         ListNode rest = l1 != null ? l1 : l2;
-
+        // no carray, link the rest node
+        if (sum / 10 == 0) {
+            curr.next = rest;
+            return head.next;
+        }
+        // has carry, continue add
         while (rest != null) {
             sum  = sum / 10 + rest.val;
             curr.next = new ListNode(sum % 10);
             rest = rest.next;
             curr = curr.next;
         }
+        // handle the last carry
         if (sum / 10 != 0) {
             curr.next = new ListNode(sum / 10);
         }
@@ -47,26 +53,27 @@ public class AddTwoNumbers {
     /**
      * Create list by array.
      */
-	public static ListNode createList(int[] arr) {
-		if (arr.length == 0) { return null; }
-		ListNode node = new ListNode(arr[0]);
-		ListNode curr = node; // used to move next
-		for (int i = 1; i < arr.length; i++) {
-			curr.next = new ListNode(arr[i]);
-			curr = curr.next;
-		}
-		return node;
-	}
-	/**
-	 * Print list.
-	 */
-	public static void printList(ListNode list) {
+    public static ListNode createList(int[] arr) {
+        if (arr.length == 0) { return null; }
+        ListNode node = new ListNode(arr[0]);
+        ListNode curr = node; // used to move next
+        for (int i = 1; i < arr.length; i++) {
+            curr.next = new ListNode(arr[i]);
+            curr = curr.next;
+        }
+        return node;
+    }
+
+    /**
+     * Print list.
+     */
+    public static void printList(ListNode list) {
         while (list != null) {
             System.out.print(list.val + "->");
             list = list.next;
         }
         System.out.println("null");
-	}
+    }
 
     /**
      * Test case.

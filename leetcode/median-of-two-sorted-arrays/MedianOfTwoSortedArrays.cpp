@@ -13,16 +13,14 @@ public:
         int ln = 0, hn = n, mn = (ln + hn) / 2;
 
         // special condition
-        if (m <= 0 || n <= 0) {
-            if (m < 0 && n < 0) { // both are 0
-                return 0;
-            } else if (m < 0) { // nums1 is empty
-                return (n % 2 != 0) ? ((double)nums2[mn] + nums2[mn+1]) / 2 : nums2[mn];
-            } else if (n < 0) { // nums2 is empty
-                return (m % 2 != 0) ? ((double)nums1[mm] + nums1[mm+1]) / 2 : nums1[mm];
-            } else if (m == 0 && n == 0) {
-                return ((double)nums1[0] + nums2[0]) / 2;
-            }
+        if (m < 0 && n < 0) { // both are 0
+            return 0;
+        } else if (m < 0) { // nums1 is empty
+            return (n % 2 != 0) ? ((double)nums2[mn] + nums2[mn+1]) / 2 : nums2[mn];
+        } else if (n < 0) { // nums2 is empty
+            return (m % 2 != 0) ? ((double)nums1[mm] + nums1[mm+1]) / 2 : nums1[mm];
+        } else if (m == 0 && n == 0) {
+            return ((double)nums1[0] + nums2[0]) / 2;
         }
         // both are not empty
         while (lm < hm || ln < hn) {

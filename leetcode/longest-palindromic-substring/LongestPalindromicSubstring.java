@@ -11,9 +11,11 @@ public class LongestPalindromicSubstring {
         if (len <= 2) { return s; }
         int start = 0;
         int end = 0;
+        // l , r pointers to left and right position(i as the middle)
+        int l, r;
         for (int i = 0; i < len; i++) {
-            // l , r means left and right position
-            int l = i - 1, r = i + 1;
+            l = i - 1;
+            r = i + 1;
             // skip the checked substring(same with previous char)
             if (l >= 0 && s.charAt(l) == s.charAt(i)) { continue; }
             // extend the same characters

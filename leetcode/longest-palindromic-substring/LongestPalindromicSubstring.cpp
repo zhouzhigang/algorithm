@@ -15,10 +15,11 @@ public:
         // return origin string if length less than 2(exist and only exist one LPS)
         if (size <= 2) { return s; }
         int start = 0;
-        int end = 0;
+        int maxLen = 0;
+        // l , r pointers to left and right position(i as the middle)
+        int l, r;
         for (int i = 0; i < size; i++) {
-            // l , r means left and right position
-            int l = i - 1, r = i + 1;
+            l = i - 1, r = i + 1;
             // skip the checked substring(same with previous char)
             if (l >= 0 && s[l] == s[i]) { continue; }
             // extend the same characters
@@ -31,13 +32,13 @@ public:
                 r++;
             }
             // check if the longest(the final l,r should not include)
-            if (r - l - 2 > end -start) {
+            if (r - l - 1 > maxLen) {
                 start = l + 1;
-                end = r - 1;
+                maxLen = r - l - 1;
             }
         }
         // Note: c++ substring method `substr(start, len)`
-        return s.substr(start, end-start+1);
+        return s.substr(start, maxLen);
     }
 };
 

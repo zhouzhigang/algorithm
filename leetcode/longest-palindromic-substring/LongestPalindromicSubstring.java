@@ -9,18 +9,17 @@ public class LongestPalindromicSubstring {
         int len = s.length();
         // return origin string if length less than 2(exist and only exist one LPS)
         if (len <= 2) { return s; }
-        // length greater than 2
         int start = 0;
-        int end = s.charAt(0) == s.charAt(1) ? 1 : 0;
-        for (int i = 1; i < len-1; i++) {
+        int end = 0;
+        for (int i = 0; i < len; i++) {
             // l , r means left and right position
             int l = i - 1, r = i + 1;
-            // check if there any double middle letter
-            if (s.charAt(l) != s.charAt(r)) {
-                if (s.charAt(i) == s.charAt(r)) {
-                    r++;
-                } // else if (s.charAt(l) == s.charAt(i)) { l--; }
-            }
+            // skip the checked substring(same with previous char)
+            if (l >= 0 && s.charAt(l) == s.charAt(i)) { continue; }
+            // extend the same characters
+            while (r < len && s.charAt(i) == s.charAt(r)) {
+                r++;
+            } 
             // check if left equals right
             while (l >= 0 && r < len && s.charAt(l) == s.charAt(r)) {
                 l--;
@@ -42,6 +41,7 @@ public class LongestPalindromicSubstring {
             "", "a",
             "aa", "baa", "aab",
             "aaa", "baaa", "aaab",
+            "aaaa", "baaaa", "aaaab",
             "aba", "caba", "abac",
             "abba", "cabba", "abbac",
             "babba", "cbabba", "babbac",
@@ -52,6 +52,7 @@ public class LongestPalindromicSubstring {
             "", "a",
             "aa", "aa", "aa",
             "aaa", "aaa", "aaa",
+            "aaaa", "aaaa", "aaaa",
             "aba", "aba", "aba",
             "abba", "abba", "abba",
             "abba", "abba", "abba",

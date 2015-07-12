@@ -13,11 +13,10 @@ public class StringToIntegerAtoi {
         }
         if (i == len) { return 0; }
         // check if has positive or negtive symbol
-        if (str.charAt(i) == '-') {
-            i++;
-            isNegtive = true;
-        }
-        if (str.charAt(i) == '+') {
+        if (str.charAt(i) == '+' || str.charAt(i) == '-') {
+            if (str.charAt(i) == '-') {
+                isNegtive = true;
+            }
             i++;
         }
         // calculate int value
@@ -30,7 +29,7 @@ public class StringToIntegerAtoi {
         while (i < len && Character.isDigit(str.charAt(i))) {
             int ch = str.charAt(i) - '0';
             if (isNegtive) {
-                if (-res < (Integer.MIN_VALUE - ch) / base) {
+                if (-res < (Integer.MIN_VALUE + ch) / base) {
                     return Integer.MIN_VALUE;
                 }
             } else {
@@ -50,19 +49,21 @@ public class StringToIntegerAtoi {
         String[] strs = {
             "", "   ", // only contains space
             "123", "+123", "-123", // with positive and negtive symbol
+            "-+123", "+-123", "--123", // with multiple +/- symbol
             "  123 ", "-12 3", " +123  ", // with space
             "123junk", "123abcdfg", // with junk character
             "2147483648", "-2147483649", // overflow
-            "2147483630", "-2147483630", // not overflow
+            "2147483647", "-2147483647", // not overflow
             "21474836300", "-21474836300" // another overflow
         };
         int[] results = {
             0, 0, // only space
             123, 123, -123, // with negtive symbol
+            0, 0, 0, // with mutiple +/- symbol
             123, -12, 123, // skip prefix white space
             123, 123, // ignore junk letter
             2147483647, -2147483648, // overflow
-            2147483630, -2147483630, // not overflow
+            2147483647, -2147483647, // not overflow
             2147483647, -2147483648 //overflow
         };
         int count = strs.length;

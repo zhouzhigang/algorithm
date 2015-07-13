@@ -4,6 +4,7 @@ LeetCode Solutions
 ## Problems
 |No.|Title|Data Structures & Algorithms|Difficulty |Solution|
 |---|-----|----------------------------|-----------|--------|
+|[9](https://leetcode.com/problems/palindrome-number/)|[Palindrome Number ](palindrome-number)|`Math`|Easy|[Java](palindrome-number/PalindromeNumber.java)|
 |[8](https://leetcode.com/problems/string-to-integer-atoi/)|[String to Integer (atoi) ](string-to-integer-atoi)|`Math`, `String`|Easy|[Java](string-to-integer-atoi/StringToIntegerAtoi.java) [C++](string-to-integer-atoi/StringToIntegerAtoi.cpp) [C](string-to-integer-atoi/StringToIntegerAtoi.c)|
 |[7](https://leetcode.com/problems/reverse-integer/)|[Reverse Integer](reverse-integer)|`Math`|Easy|[Java](reverse-integer/ReverseInteger.java) [C++](reverse-integer/ReverseInteger.rb) [Python](reverse-integer/ReverseInteger.py) [C](reverse-integer/ReverseInteger.c) [Ruby](reverse-integer/ReverseInteger.c)|
 |[6](https://leetcode.com/problems/zigzag-conversion/)|[ZigZag Conversion](zigzag-conversion)|`String`|Easy|[Java](zigzag-conversion/ZigZagConversion.java) [C++](zigzag-conversion/ZigZagConversion.cpp) [Python](zigzag-conversion/ZigZagConversion.py) [C](zigzag-conversion/ZigZagConversion.c) [Ruby](zigzag-conversion/ZigZagConversion.rb)|

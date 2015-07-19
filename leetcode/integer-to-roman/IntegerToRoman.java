@@ -1,5 +1,8 @@
 public class IntegerToRoman {
-    public String intToRoman(int num) {
+    /**
+     * Use 7 basic symbols.
+     */
+    public String intToRoman_1(int num) {
         StringBuilder sb = new StringBuilder();
         char[] basic = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
         int n = 4;
@@ -38,6 +41,29 @@ public class IntegerToRoman {
         return sb.toString();
     }
 
+    /**
+     * Use space to save time.
+     */
+    public String intToRoman(int num) {
+        StringBuilder sb = new StringBuilder();
+        String[][] basic = {
+            {"",  "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" },
+            {"",  "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" },
+            {"",  "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" },
+            {"", "M", "MM", "MMM"}
+        };
+        int i = 3;
+        int j = 0;
+        int k = 1000;
+        while (num != 0) {
+            j = num / k;
+            sb.append(basic[i][j]);
+            num = num - j * k;
+            k /= 10;
+            i--;
+        }
+        return sb.toString();
+    }
     public static void main(String[] args) {
         IntegerToRoman sol = new IntegerToRoman();
 

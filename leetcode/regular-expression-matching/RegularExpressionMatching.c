@@ -2,7 +2,6 @@
 #include <stdio.h>      // printf
 
 bool isMatch(char* s, char* p) {
-    printf("s: %s, p: %s\n", s, p);
     // recursive exit condition
     if (*p == '\0') { 
         return *s == '\0';
@@ -23,27 +22,29 @@ bool isMatch(char* s, char* p) {
 int main(int argc, char *argv[]) {
      char* strs[] = {
          "", "", // empty
-        "aa", "a",
-        "aa", "aa",
-        "aaa", "aa",
+        "aa", "aa", // full match
         "aaa", "aaa",
-        "aa", "a*",
-        "aa", ".*",
+        "aa", "a", // part match
+        "aaa", "aa", 
+        "aa", "a*", // full match with *
+        "aa", ".*", // full match with .*
         "ab", ".*",
-        "aab", "c*a*b*",
-        "abcd", "d*"
+        "aab", "c*a*b*", // full match with extra c*
+        "abcd", "d*", // part match with *
+        "a", ".*..a*" // not match with extra .
     };
     bool results[] = {
         true, // empty
+        true, // full match
+        true,
+        false, // part match(false)
         false,
+        true, // full match with *
+        true, // full match with .*
         true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false
+        true, // full match with extra c*
+        false, // part match with *
+        false // not match with extra .
     };
 
     int count = sizeof(results)/sizeof(results[0]);

@@ -1,6 +1,8 @@
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
         int len = strs.length;
+        if (len == 0) return "";
+        if (len == 1) return strs[0];
         int minLen = strs[0].length();
         int i;
         for (i = 1 ; i < len; i++) {
@@ -22,7 +24,7 @@ public class LongestCommonPrefix {
         LongestCommonPrefix sol = new LongestCommonPrefix();
 
         String[][] strs = {
-            {""}, // empty string
+            {}, // empty array
             {"abcd"}, // only one string
             {"a", "abcd", "acd", "abd"},
             {"abc", "abcd", "abd", "abde"},

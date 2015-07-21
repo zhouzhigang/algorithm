@@ -4,7 +4,7 @@ LeetCode Solutions
 ## Problems
 |No.|Title|Data Structures & Algorithms|Difficulty |Solution|
 |---|-----|----------------------------|-----------|--------|
-|[14](https://leetcode.com/problems/longest-common-prefix/)|[Longest Common Prefix](longest-common-prefix)|`String`|Easy|[Java](longest-common-prefix/LongestCommonPrefix.java)
+|[14](https://leetcode.com/problems/longest-common-prefix/)|[Longest Common Prefix](longest-common-prefix)|`String`|Easy|[Java](longest-common-prefix/LongestCommonPrefix.java) [C++](longest-common-prefix/LongestCommonPrefix.cpp)|
 |[13](https://leetcode.com/problems/roman-to-integer/)|[Roman to Integer](roman-to-integer)|`Math`, `Strin`|Easy|[java](roman-to-integer/RomanToInteger.java)|
 |[12](https://leetcode.com/problems/integer-to-roman/)|[Integer to Roman](integer-to-roman)|`Math`, `String`|Medium|[Java](integer-to-roman/IntegerToRoman.java) [C++](integer-to-roman/IntegerToRoman.cpp) [Python](integer-to-roman/IntegerToRoman.py) [C](integer-to-roman/IntegerToRoman.c) [Ruby](integer-to-roman/IntegerToRoman.rb)|
 |[11](https://leetcode.com/problems/container-with-most-water/)|[Container With Most Water](container-with-most-water)|`Array`, `Two Pointers`|Medium|[Java](container-with-most-water/ContainerWithMostWater.java) [C++](container-with-most-water/ContainerWithMostWater.cpp) [Python](container-with-most-water/ContainerWithMostWater.py) [C](container-with-most-water/ContainerWithMostWater.c) [Ruby](container-with-most-water/ContainerWithMostWater.rb)|

@@ -9,11 +9,16 @@ public class ThreeSum {
         int right = nums.length -1;
         int i, j, k, sum;
         for (i = 0; i < right - 1; i++) {
+            if (i > 0 && nums[i] == nums[i-1]) {
+                continue; // skip duplicate numbers
+            }
             if (nums[i] > 0) break;
-
             j = i+1; k = right;
-
-            while (j < k && nums[k] >= 0) {
+            while (j < k) {
+                if (j > i+1 && nums[j] == nums[j-1]) {
+                    j++; // skip duplicate numbers
+                    continue;
+                }
                 sum = nums[i] + nums[j] + nums[k];
                 if (sum > 0) {
                     k--;
@@ -26,17 +31,9 @@ public class ThreeSum {
                     triplet.add(nums[j]);
                     triplet.add(nums[k]);
                     result.add(triplet);
-                    if (nums[j] != nums[k]) {
-                        j++;
-                        k--;
-                    } else {
-                        break; // skip same number
-                    }
+                    j++;
+                    k--;
                 }
-            }
-
-            while (i < right && nums[i] == nums[i+1]) {
-                i++; // skip same number
             }
         }
         return result;
@@ -53,6 +50,8 @@ public class ThreeSum {
             {0, 0, 0, 0, 0}, // duplicate number
             {-2, -1, 0, 1, 2},
             {-2, -1, 0, 1, 1, 2},
+            {-2, 0, 0, 2, 2, 2},
+            {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6},
         };
         int[] results = {
             0, 0, 0, // no such triple
@@ -62,6 +61,8 @@ public class ThreeSum {
             1, // duplicate number
             2,
             3,
+            1,
+            6,
         };
         int count = results.length;
         int failed = 0;

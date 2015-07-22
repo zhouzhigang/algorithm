@@ -4,7 +4,7 @@ LeetCode Solutions
 ## Problems
 |No.|Title|Data Structures & Algorithms|Difficulty |Solution|
 |---|-----|----------------------------|-----------|--------|
-|[15](https://leetcode.com/problems/3sum/)|[3Sum](3sum)|`Array`, `Two Pointers`|Medium|[Java](3sum/ThreeSum.java)|
+|[15](https://leetcode.com/problems/3sum/)|[3Sum](3sum)|`Array`, `Two Pointers`|Medium|[Java](3sum/ThreeSum.java) [C++](3sum/ThreeSum.cpp)|
 |[14](https://leetcode.com/problems/longest-common-prefix/)|[Longest Common Prefix](longest-common-prefix)|`String`|Easy|[Java](longest-common-prefix/LongestCommonPrefix.java) [C++](longest-common-prefix/LongestCommonPrefix.cpp) [C](longest-common-prefix/LongestCommonPrefix.c)|
 |[13](https://leetcode.com/problems/roman-to-integer/)|[Roman to Integer](roman-to-integer)|`Math`, `String`|Easy|[Java](roman-to-integer/RomanToInteger.java) [C++](roman-to-integer/RomanToInteger.cpp)|
 |[12](https://leetcode.com/problems/integer-to-roman/)|[Integer to Roman](integer-to-roman)|`Math`, `String`|Medium|[Java](integer-to-roman/IntegerToRoman.java) [C++](integer-to-roman/IntegerToRoman.cpp) [Python](integer-to-roman/IntegerToRoman.py) [C](integer-to-roman/IntegerToRoman.c) [Ruby](integer-to-roman/IntegerToRoman.rb)|

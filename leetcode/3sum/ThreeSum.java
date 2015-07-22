@@ -9,14 +9,12 @@ public class ThreeSum {
         int right = nums.length -1;
         int i, j, k, sum;
         for (i = 0; i < right - 1; i++) {
-            if (i > 0 && nums[i] == nums[i-1]) {
-                continue; // skip duplicate numbers
-            }
+            // if (i > 0 && nums[i] == nums[i-1]) { continue; } // skip duplicate numbers
             if (nums[i] > 0) break;
             j = i+1; k = right;
             while (j < k) {
                 if (j > i+1 && nums[j] == nums[j-1]) {
-                    j++; // skip duplicate numbers
+                    j++;
                     continue;
                 }
                 sum = nums[i] + nums[j] + nums[k];
@@ -34,6 +32,10 @@ public class ThreeSum {
                     j++;
                     k--;
                 }
+            }
+
+            while (i < right && nums[i] == nums[i+1]) {
+                i++; // skip same number
             }
         }
         return result;

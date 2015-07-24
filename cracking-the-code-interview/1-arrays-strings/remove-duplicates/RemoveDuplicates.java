@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 public class RemoveDuplicates {
 
-    public static int removeDuplicates1(char[] chArr) {
+    public int removeDuplicates1(char[] chArr) {
         int length = chArr.length;
         for(int i = 0; i < length-1; i++) {
             for(int j = i+1; j < length; j++) {
@@ -31,11 +31,10 @@ public class RemoveDuplicates {
     }
 
     /**
-     * compare with the new string to check if exist, if not exist, insert char
-     * @param  chArr [description]
-     * @return       [description]
+     * Compare with the new string to check if exist, if not exist, insert char.
      */
-    public static int removeDuplicates2(char[] chArr) {
+    public int removeDuplicates2(char[] chArr) {
+        if (chArr.length == 0) return 0;
         int length = 1;
         for(int i = 1; i < chArr.length; i++) {
             boolean exist = false;
@@ -53,20 +52,35 @@ public class RemoveDuplicates {
         return length;
     }
 
-    public static void arrayToString(char[] array, int length) {
-        for(int i = 0; i < length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) {
-        char[] chArr = new char[]{'a','b','d','d','a','e',};
-        System.out.println(chArr);
+        RemoveDuplicates sol = new RemoveDuplicates();
+        
+        String[] strs = {
+            "", // empty string
+            "aaa", // all duplicate
+            "abcd", // no duplicate
+            "aaabbb", // continuous duplicates
+            "ababab", // non-contiguous duplicates
+        };
 
-        int length = RemoveDuplicates.removeDuplicates2(chArr);
-        System.out.println("new length: " + length);
-        RemoveDuplicates.arrayToString(chArr, length);
+        int[] results = {
+            0, // empty string
+            1, // all duplicate
+            4, // no duplicate
+            2, // continuous duplicates
+            2, // non-contiguous duplicates
+        };
 
+        int count = results.length;
+        int failed = 0;
+        int result;
+        for (int i = 0; i < count; i++) {
+            result = sol.removeDuplicates2(strs[i].toCharArray());
+            if (result != results[i]) {
+                failed++;
+                System.out.println("Test: " + strs[i] + ", expect: " + results[i] + ", while returned: " + result);
+            }
+        }
+        System.out.println("Test " + count + " cases: " + (count-failed) + " success, " + failed + " failed.");
     }
 }

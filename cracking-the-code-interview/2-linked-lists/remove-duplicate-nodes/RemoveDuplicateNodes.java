@@ -9,7 +9,11 @@ class Node {
     }
 }
 public class RemoveDuplicateNodes {
-    public void deleteDups(Node n) {
+    /**
+     * Delete duplicate nodes with hash map.
+     * Use hash map to check if duplicate.
+     */
+    public void deleteDups_Hash(Node n) {
         if (n == null) return;
         Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
         Node p = n;
@@ -27,6 +31,34 @@ public class RemoveDuplicateNodes {
             }
         }
                 
+    }
+
+    /**
+     * Delete duplicate nodes without extra buffer.
+     * Use two pointer to compare from head to p.
+     */
+    public void deleteDups(Node n) {
+        if (n == null) return;
+        Node head = n;
+        Node p = n;
+        Node q = p.next;
+        while (q != null) {
+            head = n; // reset head
+            // compare from head to p
+            while (head != p) {
+                if (head.data == q.data) {
+                    // delete node q
+                    p.next = q.next;
+                    q = p.next;
+                    break;
+                } else {
+                    head = head.next;
+                }
+            }
+            // move next
+            p = q;
+            q = q.next;
+        }
     }
 
     public static Node createLinkedList(int[] arr) {

@@ -33,6 +33,7 @@
 ## Exercises
 
 |No.|Title|Solution|
+|---|-----|--------|
 |2.1|[Remove duplicates from an unsorted linked list](remove-duplicate-nodes)|[Java](remove-duplicate-nodes/RemoveDuplicateNodes.java)|
 |2.2|[Find the nth to last element of a singly linked list]()|[Java]()|
 |2.3|[Delete a node in the middle of a single linked list]()|[Java]()|

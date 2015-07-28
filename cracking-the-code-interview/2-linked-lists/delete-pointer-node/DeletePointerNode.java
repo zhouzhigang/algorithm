@@ -7,12 +7,10 @@ class Node {
 }
 public class DeletePointerNode {
     public boolean deleteNode(Node curr) {
-        if (curr == null) return false;
+        if (curr == null || curr.next == null) return false;
         Node q = curr.next;
-        if (q != null) {
-            curr.data = q.data; // copy data(simulate previous)
-            curr.next = q.next; // delete node
-        }
+        curr.data = q.data; // copy data(simulate previous)
+        curr.next = q.next; // delete node
         return true;
     }
 
@@ -39,19 +37,27 @@ public class DeletePointerNode {
         DeletePointerNode sol = new DeletePointerNode();
 
         int[] nums = {1, 2, 3, 4, 5};
+        boolean[] results = {true, true, true, true, false};
         int count = nums.length;
+        int failed = 0;
+        boolean result;
         for (int i = 0; i < count; i++) {
             Node head = createLinkedList(nums);
             Node curr = head;
             int j = 0;
+            // move curr to differnt position(from head to tail)
             while (j < i) {
                 curr = curr.next;
                 j++;
             }
-            sol.deleteNode(curr);
-            System.out.println("==== Delete at " + i + "th Node ====");
+            result = sol.deleteNode(curr);
+            System.out.println("==== Delete at " + i + "th Node: " + result + " ====");
             printLinkedList(head);
+            if (result != results[i]) {
+                failed++;
+            }
         }
+        System.out.println("Test " + count + " cases: " + (count-failed) + " success, " + failed + " failed.");
     }
 }
 

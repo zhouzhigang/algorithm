@@ -37,5 +37,5 @@
 |2.1|[Remove duplicates from an unsorted linked list](remove-duplicate-nodes)|[Java](remove-duplicate-nodes/RemoveDuplicateNodes.java)|
 |2.2|[Find the nth to last element of a singly linked list](find-last-nth)|[Java](find-last-nth/FindLastNth.java)|
 |2.3|[Delete a node in the middle of a single linked list](delete-pointer-node)|[Java](delete-pointer-node/DeletePointerNode.java)|
-|2.4|[Add reverse order linked list]()|[Java]()|
+|2.4|[Sum of reverse order linked list](sum-of-linked-list)|[Java](sum-of-linked-list/SumOfLinkedList.java)|
 |2.5|[Find the begining node of the loop in a circular linked list]()|[Java]()|

@@ -38,4 +38,4 @@
 |2.2|[Find the nth to last element of a singly linked list](find-last-nth)|[Java](find-last-nth/FindLastNth.java)|
 |2.3|[Delete a node in the middle of a single linked list](delete-pointer-node)|[Java](delete-pointer-node/DeletePointerNode.java)|
 |2.4|[Sum of reverse order linked list](sum-of-linked-list)|[Java](sum-of-linked-list/SumOfLinkedList.java)|
-|2.5|[Find the begining node of the loop in a circular linked list]()|[Java]()|
+|2.5|[Find the begininng node of the loop in a circular linked list](find-beginning-circular)|[Java](find-beginning-circular/FindBeginningCircular.java)|

@@ -46,7 +46,7 @@
 ## Exercises
 |No.|Title|Solution|
 |---|-----|--------|
-|3.1|[Use a single array to implement three stacks]()|[Java]()|
+|3.1|[Use a single array to implement three stacks](three-stacks)|[Java1](three-stacks/ThreeStacks1.java)|
 |3.2|[Stack with push, pop, min in O(1) time]()]|[Java]()|
 |3.3|[Set of stacks, create a new stack once previous capacity]()|[Java]()|
 |3.4|[Hanoi with stacks]()|[Java]()|

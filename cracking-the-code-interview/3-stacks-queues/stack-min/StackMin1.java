@@ -45,8 +45,8 @@ public class StackMin1 {
     }
 
     public static void main(String[] args) {
-        StackMin1 stack = new StackMin1(5);
-        int[] arr = {2, 3, 1, 4, 5};
+        StackMin1 stack = new StackMin1(6);
+        int[] arr = {2, 1, 3, 1, 4, 5};
         int count = arr.length;
         boolean res;
         Integer val;
@@ -54,7 +54,7 @@ public class StackMin1 {
         for (int i = 0; i < count; i++) {
             res = stack.push(arr[i]);
             if (res) {
-                System.out.print(arr[i] + "->");
+                System.out.print(arr[i] + "(min: " + stack.min() + ")->");
             } else {
                 System.out.print("Stack Overflow");
             }

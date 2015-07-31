@@ -9,3 +9,15 @@ SetOfStacks push() and SetOfStacks pop() should behave identically to a single s
 
 FOLLOW UP
 Implement a function popAt(int index) which performs a pop operation on a specific sub-stack 
+
+## Aanalysis
+
+Implement a Stack with push, pop, isEmpty, isFull function first.
+then use an ArrayList to store these Stacks.
+
+Get the last Stack from the List first when perform push and pop.
+Add a new stack in the List when perform `push` and the last stack is full.
+Remove the stack from the List when perform `pop` and the last stack is empty.
+
+What does the `popAt(int index)` mean? If we just simply pop element from this stack, it will damage the origin `pop` function.
+Therefore, we need move the bottom element in next stack to current stack, and the next stack also need a whole shift, and so on.

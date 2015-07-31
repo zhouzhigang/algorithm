@@ -28,6 +28,14 @@ class Stack {
     public boolean isFull() {
         return top + 1 == stackSize;
     }
+
+    public int shiftBottom() {
+        int bottom = arr[0];
+        for (int i = 1; i < top; i++) {
+            arr[i-1] = arr[i];
+        }
+        return bottom;
+    }
 }
 public class SetOfStacks {
     ArrayList<Stack> stacks = new ArrayList<Stack>();
@@ -69,17 +77,38 @@ public class SetOfStacks {
         return val;
     }
 
+    public Integer popAt(int index) {
+        if (index < 0 || index > stacks.size() - 1) return null;
+        Stack stack = stacks.get(index);
+        int val = stack.pop();
+        for(int i = index + 1; i < stacks.size(); i++) {
+            stack = stacks.get(i-1);
+            Stack nextStack = stacks.get(i);
+            int bottom = nextStack.shiftBottom();
+            stack.push(bottom);
+        }
+        return val;
+    }
+
     public static void main(String[] args) {
         SetOfStacks stacks = new SetOfStacks(5);
-        for (int i = 0; i < 10; i++) {
+        System.out.println("==== Push Test ====");
+        for (int i = 0; i < 15; i++) {
             stacks.push(i);
             System.out.print(i + "->");
         }
         System.out.println("null");
-        for (int i = 0; i < 10; i++) {
-            stacks.pop();
-            System.out.print(i + "<-");
+        System.out.println("==== Pop Test ====");
+        for (int i = 0; i < 5; i++) {
+            int val = stacks.pop();
+            System.out.print(val + "<-");
         }
-        System.out.println("null");
+        System.out.println();
+        System.out.println("==== PopAt Test ====");
+        for (int i = 0; i < 5; i++) {
+            int val = stacks.popAt(0);
+            System.out.print(val + "<-");
+        }
+        System.out.println();
     }
 }

@@ -48,7 +48,7 @@
 |---|-----|--------|
 |3.1|[Use a single array to implement three stacks](three-stacks)|[Java1](three-stacks/ThreeStacks1.java) [Java2](three-stacks/ThreeStacks2.java)|
 |3.2|[Stack with push, pop, min in O(1) time](stack-min)][Java1](stack-min/StackMin1.java) [Java2](stack-min/StackMin2.java)|
-|3.3|[Set of stacks, create a new stack once previous capacity]()|[Java]()|
+|3.3|[Set of stacks, create a new stack once previous capacity](set-of-stacks)|[Java](set-of-stacks/SetOfStacks.java)|
 |3.4|[Hanoi with stacks]()|[Java]()|
 |3.5|[Implenting a queue using two stacks]()|[Java]()|
 |3.6|[Sort a stack using push, pop, peak, isEmpty]()|[Java]()|

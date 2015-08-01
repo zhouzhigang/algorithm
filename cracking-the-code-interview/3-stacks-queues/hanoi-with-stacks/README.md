@@ -23,6 +23,9 @@ Suppose the tower named 'A', 'B', 'C'.
 
 Then consider about use stack to simulate recursive.
 
+Which elements should we use stacks?
+Functions or towers(StackA, StackB, StackC)?
+
 Let's expand the recursive process, take 3 for example
 
     h(3, a, b, c)
@@ -42,3 +45,4 @@ Let's expand the recursive process, take 3 for example
                 // move 1 from a to c
         // <<<< end of the h(2, b, a, c)
     // <<<< end of h(3, a, b, c)
+

@@ -50,5 +50,5 @@
 |3.2|[Stack with push, pop, min in O(1) time](stack-min)][Java1](stack-min/StackMin1.java) [Java2](stack-min/StackMin2.java)|
 |3.3|[Set of stacks, create a new stack once previous capacity](set-of-stacks)|[Java](set-of-stacks/SetOfStacks.java)|
 |3.4|[Hanoi with stacks](hanoi-with-stacks)|[Java](hanoi-with-stacks/HanoiWithStacks.java)|
-|3.5|[Implenting a queue using two stacks]()|[Java]()|
+|3.5|[Implenting a queue using two stacks](queue-two-stacks)|[Java](queue-two-stacks/MyQueue.java)|
 |3.6|[Sort a stack using push, pop, peak, isEmpty]()|[Java]()|

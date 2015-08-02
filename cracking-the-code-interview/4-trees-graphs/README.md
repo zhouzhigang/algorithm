@@ -30,8 +30,8 @@ Trees and grphs questions typically come in one of two forms:
 ## Exercises
 
 |No.|Title|Solution|
-|+++|+++++|++++++++|
-|4.1|[Check if a tree is balanced]()|[Java]()|
+|---|-----|--------|
+|4.1|[Check if a tree is balanced](is-balanced-tree)|[Java](is-balanced-tree/IsBalancedTree.java)|
 |4.2|[Find out wether there is a route between two nodes in a directed graph]()|[Java]()
 |4.3|[Create a binary tree with minimal height with a sorted array]()|[Java]()|
 |4.4|[Create a linked list of all the nodes at each depth for a binary search tree]()|[Java]()|

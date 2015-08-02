@@ -4,17 +4,15 @@ public class SortStack {
 
     public Stack<Integer> sort(Stack<Integer> s) {
         if (s == null || s.isEmpty()) return null;
-        int temp = s.pop();
+        int temp;
         Stack<Integer> t = new Stack<Integer>();
-        t.push(temp);
         while (!s.isEmpty()) {
             temp = s.pop();
-            if (temp < t.peek()) {
-                // push back
-                while (!t.isEmpty()) {
-                    s.push(t.pop());
-                }
+            while (!t.isEmpty() && temp < t.peek()) {
+                // push back until find tmp position
+                s.push(t.pop());
             }
+            // insert temp
             t.push(temp);
         }
         return t;

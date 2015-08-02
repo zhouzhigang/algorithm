@@ -27,3 +27,10 @@ If we want to adjust the order, maybe we need another stack(just like [implement
     1           1           1           1   4       5               3
     2           2   4(top)  2   3       2   3       2   1       2   1
 
+
+    temp = s.pop()
+    // find right position of temp in stack t
+    while t!=null && t.peek > temp
+        push back
+    // insert temp in stack t
+    t.push(temp)

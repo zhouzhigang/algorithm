@@ -62,3 +62,5 @@ Insertion requires two pointers as well, but because one of them is used for an 
 ### [Stack Implementation](stack)
 
 ### [Maintain Linked List Tail Pointer](maintain-tail-pointer)
+
+### [Bugs in removeHead](bugs-in-remove-head)

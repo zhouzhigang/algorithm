@@ -56,3 +56,9 @@ Any insertion or deletion of elements in the middle of a list requires modificat
 
 **Note**: Deleteion of an element always requires at least two pointer variables.
 Insertion requires two pointers as well, but because one of them is used for an element in the list and the other for the pointer returned by the memory allocation call, there's litte danger of forgetting this in the insertion case.
+
+## Linked List Problems
+
+### [Stack Implementation](stack)
+
+### [Maintain Linked List Tail Pointer](maintain-tail-pointer)

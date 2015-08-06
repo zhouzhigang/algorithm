@@ -59,14 +59,12 @@ Insertion requires two pointers as well, but because one of them is used for an 
 
 ## Linked List Problems
 
-### [Stack Implementation](stack)
-
-### [Maintain Linked List Tail Pointer](maintain-tail-pointer)
-
-### [Bugs in removeHead](bugs-in-remove-head)
-
-### [Mth-to-Last Element of a Linked List](mth-to-last)
-
-### [List Flattening](list-flattening)
-
-### [List Unflattening](list-unflattening)
+|No.|Title|Solution|
+|---|-----|--------|
+|4.1|[Stack Implementation](stack)|[C](stack/stack.c)|
+|4.2|[Maintain Linked List Tail Pointer](maintain-tail-pointer)|[C](maintain-tail-pointer/single-list-tail.c)|
+|4.3|[Bugs in removeHead](bugs-in-remove-head)|[C](bugs-in-remove-head/remove-head.c)|
+|4.4|[Mth-to-Last Element of a Linked List](mth-to-last)|[C](mth-to-last/mth-to-last.c)|
+|4.5|[List Flattening](list-flattening)|[C](list-flattening/list-flatten.c)|
+|4.6|[List Unflattening](list-unflattening)|[C](list-unflattening/list-unflatten.c)|
+|4.7|[Null or Cycle](null-or-cycle)|[C](null-or-cycle/null-or-cycle.c)|

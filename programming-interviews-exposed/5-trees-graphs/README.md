@@ -172,4 +172,5 @@ All the types of searches possible in trees have analogs in graphs. The graph eq
 
 |No.|Title|Solution|
 |---|-----|--------|
-|5.1|[Height of a tree](height-of-tree)|[Java](heiht-of-tree/HeightOfTree.java|
+|5.1|[Height of a tree](height-of-tree)|[Java](heiht-of-tree/HeightOfTree.java)|
+|5.2|[Preorder Traversal](preorder-traversal)]|[Java](preorder-traversal/PreorderTraversal.java)|

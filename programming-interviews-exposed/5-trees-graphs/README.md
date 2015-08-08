@@ -152,4 +152,24 @@ Three most common types of depth-first traversals for binary tree.
 
 __Note__: If you're asked to implement a traversal, recursion is a good way to start thinking about the problem.
 
+## Graph
 
+Graphs are more genral and complex than trees. Like trees, they consist of nodes with childrem - a tree is actually a special case of a graph.
+But unlike tree nodes, graph nodes(or vertices) can have multiple "parents", possibly creating a loop(a cycle). In addition, the links between nodes, as well as the nodes themselves, may have values or weights. These links are called `edges` because they may contain more information than just a pointer.
+A graph with one-way edges is called `directed graph`.
+A graph with only two-way pointers is called an `undirected graph`.
+
+
+Graphs are commonly used to model real-world problems that are difficult to model with other data structure.
+
+There are several common ways to respresent graph data structure.
+One common representation has the data structure for each node include an `adjacency list`: a list of references to other nodes with which the node shares edges. This list is analogous to the child references of the tree node data structure, but the adjacency list is usually a dynamic data structure since the number of edges at each node can vary over a wide rane.
+Another graph representation is an `adjacency matrix`, which is a square matrix with dimension equal to the number of nodes. The matrix element at position i, j represents the number of edges extending from node i to node j.
+
+All the types of searches possible in trees have analogs in graphs. The graph equivalents are usually slightly more complex due to the possibility of cycles.
+
+## Tree and Graph Problems
+
+|No.|Title|Solution|
+|---|-----|--------|
+|5.1|[Height of a tree](height-of-tree)|[Java](heiht-of-tree/HeightOfTree.java|

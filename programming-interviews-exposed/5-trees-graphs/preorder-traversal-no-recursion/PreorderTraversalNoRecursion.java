@@ -64,6 +64,63 @@ public class PreorderTraversalNoRecursion<T> {
         }
     }
 
+    void inorderTraversal(Node<T> root) {
+        Stack<Node<T>> stack = new Stack<Node<T>>();
+        Node<T> curr = root;
+        while (curr != null) {
+            if (curr.getLeft() != null) {
+                stack.push(curr);
+                curr = curr.getLeft();
+            } else {
+                // vist left
+                curr.printValue();
+                while (stack.size() > 0) {
+                    // vist root or right
+                    curr = stack.pop();
+                    curr.printValue();
+                    // check right subtree
+                    curr = curr.getRight();
+                    if (curr != null) {
+                        if (curr.getLeft() != null) {
+                            break; // iterate left subtree
+                        } else {
+                            stack.push(curr);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    void postorderTraversal(Node<T> root) {
+        Stack<Node<T>> stack = new Stack<Node<T>>();
+        Node<T> curr = root;
+        Node<T> n;
+        while (curr != null) {
+            if (curr.getLeft() != null) {
+                stack.push(curr);
+                curr = curr.getLeft();
+            } else {
+                // vist left
+                curr.printValue();
+                while (stack.size() > 0) {
+                    // check the right subtree
+                    n = stack.peek().getRight();
+                    if (n != null && n != curr) {
+                        // not visted right subtree
+                        curr = n;
+                        break;
+                    }
+                    // vist root or right
+                    curr = stack.pop();
+                    curr.printValue();
+                }
+                // end at root
+                if (curr == root) { break; }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         PreorderTraversalNoRecursion<Integer> sol = new PreorderTraversalNoRecursion<Integer>();
         Node<Integer> root = new Node<Integer>(
@@ -86,6 +143,12 @@ public class PreorderTraversalNoRecursion<T> {
         sol.preorderTraversal(root);
         System.out.println();
         sol.preorderTraversal2(root);
+        System.out.println();
+        System.out.println("==== inorder traversal ====");
+        sol.inorderTraversal(root);
+        System.out.println();
+        System.out.println("==== postorder traversal ====");
+        sol.postorderTraversal(root);
         System.out.println();
     }
 }

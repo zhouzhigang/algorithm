@@ -178,3 +178,4 @@ All the types of searches possible in trees have analogs in graphs. The graph eq
 |5.4|[Lowest Common Ancestor](lowest-common-ancestor)|[Java](lowest-common-ancestor/LowestCommonAncestor.java)|
 |5.5|[Binary Tree to Heap](binary-to-heap)|[Java](binary-to-heap/BinaryToHeap.java)|
 |5.6|[Unbalanced Binary Search Tree](unbalanced-tree)|[Java](unbalanced-bst/UnbalancedBST.java)|
+|5.7|[Six Degree of Kevin Bacon](six-degrees)|[Java](six-degrees/SixDegrees.java)|

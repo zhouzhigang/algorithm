@@ -34,3 +34,4 @@ An array is a sequence of variables of the same type arranged contiguously in a 
 |6.1|[Find the First Nonrepeated Character](find-first-nonrepeated)|[Java](find-first-nonrepeated/FindFirstNonrepeated.java)|
 |6.2|[Remove Specified Characters](remove-specified-chars)|[Java](remove-specified-chars/RemoveSpecifiedChars.java)|
 |6.3|[Reverse Words](reverse-words)|[C](reverse-wrords/reverse-words.c)|
+|6.4|[Integer/String Conversions](integet-string-conversions)|[Java](integer-string-conversions/IntStringConversions.java)|

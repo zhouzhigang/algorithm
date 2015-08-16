@@ -12,46 +12,42 @@ void reverseWords(char* str) {
     // reverse whole string
     reverseString(str, start, length - 1);
 
-    while (end <= length) {
-        while (str[end] != ' ') { end++; }
-        printf("%d, %d", start, end);
+    while (end < length) {
+        while (str[end + 1] != ' ' && end < length - 1) { end++; }
         // reverse each word
         reverseString(str, start, end);
-        start = end + 1;
-        while (str[start+1] == ' ') { start ++; }
+        start = end + 1; // skip the first space
+        while (str[start] == ' ') { start ++; } // skip other space if has
+        end = start;
     }
 
 }
 
 void reverseString(char* str, int start, int end) {
     char temp;
-    int i, j;
-    for (i = start, j= end; i < j; i++, j--) {
-        temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
+    while (start < end) {
+        temp = str[start];
+        str[start++] = str[end];
+        str[end--] = temp;
     }
 }
 
 int main(int argc, char* argv[]) {
-    char* strs[] = {
-        "One",
-        "Two words",
-        "Do or do not, there is no try."
-    };
+    char str1[] = "One";
+    char str2[] = "Two words";
+    char str3[] = "Do or do not, there is no try.";
+    char* strs[] = { str1, str2, str3 };
 
-    char* results[] = {
-        "One",
-        "words Two",
-        "try. no is there not, do or Do"
-    };
-
+    char result1[] = "One";
+    char result2[] = "words Two";
+    char result3[] = "try. no is there not, do or Do";
+    char* results[] = { result1, result2, result3 };
+    
     int count = 3;
     int failed = 0;
     int i;
     for (i = 0; i < count; i++) {
-        reverseString(strs[i], 0, strlen(strs[i]));
-        // reverseWords(strs[i]);
+        reverseWords(strs[i]);
         if (strcmp(strs[i], results[i]) != 0) {
             failed++;
             printf("Excpect: %s, while returned: %s\n", results[i], strs[i]);

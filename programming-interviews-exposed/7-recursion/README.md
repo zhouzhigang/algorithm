@@ -82,6 +82,5 @@ Therfore, we should implement recursive algorithm with recursive call unless ins
 ## Recursion Problems
 |No.|Title|Solution|
 |---|-----|--------|
-
-
+|7.1|[Binary Search](binary-search)|[Java](binary-search/BinarySearch.java)|
 

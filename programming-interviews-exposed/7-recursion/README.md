@@ -83,4 +83,5 @@ Therfore, we should implement recursive algorithm with recursive call unless ins
 |No.|Title|Solution|
 |---|-----|--------|
 |7.1|[Binary Search](binary-search)|[Java](binary-search/BinarySearch.java)|
+|7.2|[Permutations of a String](permutations-of-string)|[Java](permutations-of-string/PermutationsOfString.java)|
 

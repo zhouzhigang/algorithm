@@ -28,3 +28,9 @@ Selection sort is one of the simplest sorting algorithms.
 It start with the first element in the array(or list) and scan through the array to find the element with the smallest key, which it swaps with the first element. The process is then repeated with each subsequent element until the last element is reached.
 
 [Java](SelectionSort.java)
+
+## Insertion Sort
+
+Insertion sort is another simple sorting algorithm. It builds a sorted array(or list) one element at a time by comparing each new element to the already-sorted elements and inseting the new element into the correction location, similar to the way you sort a hand of playing cards.
+
+[Java](InsertionSort.java)

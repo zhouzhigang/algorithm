@@ -7,7 +7,7 @@ The second is to simplify and optimize other algorithms, either by sorting the i
 Most languages include at least one sorting algorithm(typically quicksort) in their standard libraries, but we still need to understand the differences and trade-offs between them.
 Each algorithm has benefits and drawbacks, and there's no single best way to sort in all cases.
 
-## Sorting ALgorithms
+## Sorting Algorithms
 
 Choosing the right sorting algorithm can have a huge impact on application performance.
 What's right for one application isn't necessarily right for a different application. 
@@ -34,3 +34,9 @@ It start with the first element in the array(or list) and scan through the array
 Insertion sort is another simple sorting algorithm. It builds a sorted array(or list) one element at a time by comparing each new element to the already-sorted elements and inseting the new element into the correction location, similar to the way you sort a hand of playing cards.
 
 [Java](InsertionSort.java)
+
+## Quick Sort
+
+Quicksort is a divide-and-conquer algorithm that involves choosing a pivot value form a data set and splitting the set into two subsets: a set that contains all values lees than the pivot value and a set that contains all values greater than or equal to the pivot. The pivot/split process is recursively applied to each subset until there are no more subsets to split. The results are combined to form the final sorted set.
+
+[Java](QuickSort.java)

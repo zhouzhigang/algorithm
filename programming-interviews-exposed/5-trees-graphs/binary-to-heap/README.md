@@ -13,7 +13,7 @@ Heapify the tree can be O(n) time, while just the array sort is at least O(nlog(
 But the problem includes an arbitrary restriction to force you to demonstrate certain skills -  here, it's the ability to transform between tree and array data structures.
 
 The first task is to convert the tree into an array. We need to visit each node to insert its associated value into your array. It can be accomplished with a tree traversal.
-One wrinkle(assuming use static arrays) is that we have to allocate the array before put anything in it, but we don't know how many values there are in the tree befoer traverse it. This is solved by traversing the tree twice: once to count the nodes and a second time to insert the values in the array.
+One wrinkle(assuming use static arrays) is that we have to allocate the array before put anything in it, but we don't know how many values there are in the tree before traverse it. This is solved by traversing the tree twice: once to count the nodes and a second time to insert the values in the array.
 
 After the array has been filled, a simple call to the sorting routine yields a sorted array.
 
